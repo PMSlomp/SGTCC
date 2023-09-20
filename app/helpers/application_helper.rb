@@ -12,6 +12,7 @@ module ApplicationHelper
   end
 end
 
-def namespace
-  controller.class.parent.to_s.downcase
+  def namespace
+    controller.class.parent.to_s.underscore.downcase
+  end
 end
