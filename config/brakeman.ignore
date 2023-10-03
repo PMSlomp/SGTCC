@@ -3,57 +3,6 @@
     {
       "warning_type": "Dynamic Render Path",
       "warning_code": 15,
-      "fingerprint": "20d1dfa2190b465d2b3093ad52c6777f90a0336015bc3a6c947f7018944c563a",
-      "check_name": "Render",
-      "message": "Render path contains parameter value",
-      "file": "app/views/shared/examination_boards/_table.html.erb",
-      "line": 23,
-      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
-      "code": "render(action => current_academic.examination_boards.current_semester.page(params[:page]).per(5).order(:tcc, :date => :desc).with_relationships, {})",
-      "render_path": [
-        {
-          "type": "controller",
-          "class": "Academics::DashboardController",
-          "method": "index",
-          "line": 7,
-          "file": "app/controllers/academics/dashboard_controller.rb",
-          "rendered": {
-            "name": "academics/dashboard/index",
-            "file": "app/views/academics/dashboard/index.html.erb"
-          }
-        },
-        {
-          "type": "template",
-          "name": "academics/dashboard/index",
-          "line": 6,
-          "file": "app/views/academics/dashboard/index.html.erb",
-          "rendered": {
-            "name": "shared/dashboard/_examination_boards_table",
-            "file": "app/views/shared/dashboard/_examination_boards_table.html.erb"
-          }
-        },
-        {
-          "type": "template",
-          "name": "shared/dashboard/_examination_boards_table",
-          "line": 9,
-          "file": "app/views/shared/dashboard/_examination_boards_table.html.erb",
-          "rendered": {
-            "name": "shared/examination_boards/_table",
-            "file": "app/views/shared/examination_boards/_table.html.erb"
-          }
-        }
-      ],
-      "location": {
-        "type": "template",
-        "template": "shared/examination_boards/_table"
-      },
-      "user_input": "params[:page]",
-      "confidence": "Weak",
-      "note": ""
-    },
-    {
-      "warning_type": "Dynamic Render Path",
-      "warning_code": 15,
       "fingerprint": "277153254b2c3b196e7091960105dc10e59bdc423dd6d9d637dc9d42355f78bb",
       "check_name": "Render",
       "message": "Render path contains parameter value",
@@ -101,8 +50,40 @@
       "user_input": "params[:id]",
       "confidence": "Weak",
       "note": ""
+    },
+    {
+      "warning_type": "Unmaintained Dependency",
+      "warning_code": 121,
+      "fingerprint": "9a3951031616a07c8e02c86652f537e92c08685da97f5ec2b12d5d3602b55bb8",
+      "check_name": "EOLRuby",
+      "message": "Support for Ruby 2.7.2 ended on 2023-03-31",
+      "file": "Gemfile.lock",
+      "line": 274,
+      "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
+      "code": null,
+      "render_path": null,
+      "location": null,
+      "user_input": null,
+      "confidence": "High",
+      "note": ""
+    },
+    {
+      "warning_type": "Unmaintained Dependency",
+      "warning_code": 120,
+      "fingerprint": "d84924377155b41e094acae7404ec2e521629d86f97b0ff628e3d1b263f8101c",
+      "check_name": "EOLRails",
+      "message": "Support for Rails 5.2.6.2 ended on 2022-06-01",
+      "file": "Gemfile.lock",
+      "line": 274,
+      "link": "https://brakemanscanner.org/docs/warning_types/unmaintained_dependency/",
+      "code": null,
+      "render_path": null,
+      "location": null,
+      "user_input": null,
+      "confidence": "High",
+      "note": ""
     }
   ],
-  "updated": "2023-08-01 22:05:54 +0000",
+  "updated": "2023-10-03 16:07:44 +0000",
   "brakeman_version": "5.2.1"
 } 
